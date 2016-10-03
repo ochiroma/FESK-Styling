@@ -1,0 +1,16 @@
+{
+  "name": "FESK-Styling",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Onkar Chiroma",
+  "private": true,
+  "homepage": "",
+  "scripts": {
+    "test": "echo \"No test specified - force pass\" && exit 0",
+    "build-css": "node-sass --output-style compressed scss/main.scss -o public/css",
+    "postinstall": "npm run build-css"
+  },
+  "dependencies": {
+    "node-sass": "^3.10.1"
+  }
+}
