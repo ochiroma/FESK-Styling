@@ -1,0 +1,15 @@
+cache:
+  directories:
+  - node_modules
+language: node_js
+node_js:
+  - "6"
+before_install:
+  - nvm install 5.0.0
+install:
+  - npm install
+before_script:
+  - npm install -g gulp
+script:
+  - npm build
+  - npm test
