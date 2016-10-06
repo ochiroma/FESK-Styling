@@ -3,7 +3,11 @@
 //utilities
 @import "utilities/reset";
 @import "../node_modules/bourbon-neat/app/assets/stylesheets/neat";
+@import "utilities/vars";
+@import "utilities/mixins";
+@import "utilities/typography";
 @import "utilities/grid";
+@import "utilities/background";
 
 
 //elememnts
@@ -11,6 +15,7 @@
 @import "elements/paragraphs";
 @import "elements/tables";
 @import "elements/lists";
+@import "elements/buttons";
 
 //patterns
 @import "patterns/cards";

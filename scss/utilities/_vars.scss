@@ -1,0 +1,69 @@
+// BRAND COLOURS
+$great-primary: #1e1348;
+$great-secondary: #e41f13;
+$flag-red: #b00d23;
+$stone: #dfd5c5;
+$light-stone: #f6f4f1;
+$grey: #4a4a4a;
+$light-grey: #777;
+$lighter-grey: #dce0df;
+$bright-grey: #fafafa;
+$purple: #4f0b7b;
+$mid-blue: #00549f;
+$aqua: #007ea3;
+$navy: #003666;
+$turquoise: #3ed3ff;
+$white: #fff;
+$black: #000;
+$link-colour: #005ee5;
+
+
+// FONTS
+$brand-font-family: 'Roboto', sans-serif;
+
+//BODY
+$body-background-color: $bright-grey;
+$tap-highlight-color: rgba(0, 126, 163, .5);
+
+// HEADER
+$logo-width: 300px;
+
+$button-blue-bg-color: $mid-blue;
+$button-blue-bg-color--visited: $mid-blue;
+$button-blue-bg-color--hover: $navy;
+$button-blue-color: $white;
+$button-blue-color-hover: $white;
+$button-blue-outline: 1px solid $link-colour;
+
+$button-border-bg-color: transparent;
+$button-border-bg-color--visited: transparent;
+$button-border-bg-color--hover: transparent;
+$button-border-color: $black;
+$button-border-color-hover: $black;
+$button-border-outline: 1px solid $black;
+
+$button-red-bg-color: $flag-red;
+$button-red-bg-color--visited: $flag-red;
+$button-red-bg-color--hover: $great-secondary;
+$button-red-color: $white;
+$button-red-color-hover: $white;
+$button-red-outline: 0;
+
+
+$backgrounds: (
+        'grey-darkest' $grey,
+        'blue' $link-colour,
+        'stone' $stone,
+        'light-stone' $light-stone,
+        'great-primary' $great-primary
+);
+
+$button: (
+        'blue' $button-blue-bg-color $button-blue-bg-color--visited $button-blue-bg-color--hover $button-blue-color $button-blue-color-hover null $button-blue-outline,
+        'border' $button-border-bg-color $button-border-bg-color--visited $button-border-bg-color--hover $button-border-color $button-border-color-hover null $button-border-outline,
+        'red' $button-red-bg-color $button-red-bg-color--visited $button-red-bg-color--hover $button-red-color $button-red-color-hover null $button-red-outline
+);
+
+
+//FORMS
+$form-field-height: 50px;
