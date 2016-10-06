@@ -9,3 +9,13 @@
     #{$prop}: #{$value};
   }
 }
+
+// Set font dimensions
+@mixin font($font-size, $letter-spacing, $line-height: '') {
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+
+  @if $line-height != '' {
+    line-height: $line-height;
+  }
+}

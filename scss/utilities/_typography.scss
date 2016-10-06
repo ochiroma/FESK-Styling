@@ -1,12 +1,14 @@
-body,
-main,
-.main {
+body {
   @extend %light;
+  @extend %font-family;
+  @include font(15px, 0);
   background-color: $body-background-color;
   color: $grey;
-  font-family: $brand-font-family;
-  font-size: 15px;
   position: relative;
+}
+
+%font-family {
+  font-family: $brand-font-family;
 }
 
 // FONT WEIGHT
@@ -22,46 +24,76 @@ main,
   font-weight: 500;
 }
 
-// FONT SIZES
-%lede {
-  font-size: 24px;
-}
-
-%font-regular {
-  font-size: 18px;
-}
-
-%font-xxsmall {
-  font-size: 15px;
-}
-
-%font-xxxsmall {
-  font-size: 14px;
-}
-
 // HEADERS
 %h1 {
-  font-size: 48px;
+  @include font(48px, 1px);
 }
 
 %h2 {
-  font-size: 36px;
+  @include font(36px, -1px);
+}
+
+%h3 {
+  @include font(24px, 0);
+}
+
+// GENERAL
+%small {
+  @extend %medium;
+  @include font(18px, 0);
+}
+
+%lede {
+  @extend %light;
+  @include font(24px, -.2px, 31px);
+}
+
+
+%body {
+  @extend %light;
+  @include font(15px, -.2px, 0);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  @extend %medium;
+}
+
+h1,
+.h1 {
+  @extend %h1;
+}
+
+h2,
+.h2 {
+  @extend %h2;
+}
+
+h3,
+.h3 {
+  @extend %h3;
+}
+
+.small,
+small {
+  @extend %small;
+}
+
+.body {
+  @extend %body;
+}
+
+.lede {
+  @extend %lede;
 }
 
 .font {
-
-  &-small {
-    @extend %font-regular;
-    font-family: $brand-font-family;
-  }
-
-  &-xxsmall {
-    @extend %font-xxsmall;
-  }
-
-  &-xxxsmall {
-    @extend %font-xxxsmall;
-  }
 
   &-white {
     color: $white;
@@ -88,29 +120,6 @@ main,
   }
 }
 
-.h1 {
-  @extend %h1;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  @extend %medium;
-}
-
-blockquote {
-  @extend %font-regular;
-  line-height: 25px;
-}
-
-p {
-  @extend %light;
-  line-height: 23px;
-}
 
 a {
 
@@ -144,13 +153,8 @@ a {
       color: $turquoise;
     }
   }
+}
 
-  &--regular {
-    @extend %font-regular;
-  }
-
-  &--back {
-    display: inline-block;
-    margin-top: 41px;
-  }
+code {
+  color: $flag-red;
 }
